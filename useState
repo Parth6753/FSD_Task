@@ -17,12 +17,11 @@ function TodoList() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div>
       <h2>Todo List</h2>
 
       <input
         type="text"
-        placeholder="Enter Task"
         value={task}
         onChange={(e) => setTask(e.target.value)}
       />
@@ -31,12 +30,10 @@ function TodoList() {
 
       <ul style={{ listStyle: "none", padding: 0 }}>
         {tasks.map((item, index) => (
-          <li key={index} style={{ margin: "10px" }}>
+          <li key={index}>
             {item}
             <button
-              onClick={() => deleteTask(index)}
-              style={{ marginLeft: "10px" }}
-            >
+              onClick={() => deleteTask(index)}>
               Delete
             </button>
           </li>
